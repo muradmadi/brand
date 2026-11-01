@@ -40,3 +40,6 @@ dist/
 .env.*
 !.env.example
 *.db
+
+# The brand site, built by `just build`
+/_site

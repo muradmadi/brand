@@ -15,3 +15,13 @@ default:
 # One-time setup: commit guard
 setup:
     git config core.hooksPath .githooks
+
+# Redraw the logo, social and icon SVGs from the fonts in node_modules
+logos:
+    uv run --quiet scripts/logos.py
+
+# Write the stylesheets, icons, social images and signatures to dist/ and the site to _site/,
+# then list what npm would publish
+build:
+    bun scripts/build.ts
+    npm pack --dry-run

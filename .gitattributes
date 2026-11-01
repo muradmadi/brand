@@ -6,3 +6,5 @@ bun.lock linguist-generated
 package-lock.json linguist-generated
 pnpm-lock.yaml linguist-generated
 uv.lock linguist-generated
+# Fonts are binary, whatever their size.
+*.ttf binary
