@@ -1,0 +1,21 @@
+{
+  "name": "@muradmadi/brand",
+  "version": "0.0.0",
+  "description": "The colophon(7) brand: Tailwind v4 theme, CSS variables, logos, icons, social banners, fonts, profile and email signature",
+  "license": "SEE LICENSE IN LICENSE",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muradmadi/brand.git"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "oxlint": "^1.90.0",
+    "oxlint-tsgolint": "^7.0.2005",
+    "prettier": "^3.9.10",
+    "typescript": "^7"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  }
+}
