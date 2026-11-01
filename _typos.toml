@@ -1,0 +1,3 @@
+[default.extend-words]
+# "PNGs", read as the word PN plus an s.
+PN = "PN"

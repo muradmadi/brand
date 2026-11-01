@@ -1,0 +1,24 @@
+{
+  "name": "Murad Madi",
+  "languages": ["en", "es"],
+  "role": {
+    "en": "Martech specialist and growth engineer",
+    "es": "Especialista en martech y growth engineer"
+  },
+  "roleShort": {
+    "en": "martech & growth engineer",
+    "es": "martech y growth engineer"
+  },
+  "intro": {
+    "en": "I'm Murad, a martech specialist and growth engineer in Madrid. I help you trust your marketing numbers, then grow them, with whatever the job needs.",
+    "es": "Soy Murad, especialista en martech y growth engineer en Madrid. Te ayudo a fiarte de los números de tu marketing y luego a hacerlos crecer, con lo que haga falta."
+  },
+  "location": "Madrid",
+  "email": "muradmadi@gmail.com",
+  "website": "https://muradmadi.com",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/muradmadi/",
+    "github": "https://github.com/muradmadi",
+    "youtube": "https://www.youtube.com/@murad-madi"
+  }
+}

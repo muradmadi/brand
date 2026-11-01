@@ -1,0 +1,230 @@
+<!doctype html>
+<!-- The source of the brand site. `just build` fills the mm: slots from src/tokens.ts,
+     src/profile.json, logos/, social/, icons/, fonts/ and email/, compiles style.css against
+     dist/theme.css for the classes used here, inlines the CSS and the fonts, and writes it to
+     _site/ with the downloads. It offers only what the package ships; the brand book stays
+     private. -->
+<html lang="en" data-theme="terminal">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Murad Madi brand files</title>
+    <meta
+      name="description"
+      content="Logos, banners, icons, fonts and the email signature for Murad Madi."
+    />
+    <!-- mm:head -->
+    <!-- mm:style -->
+  </head>
+  <body class="bg-ground font-mono text-fg antialiased">
+    <div class="mx-auto flex max-w-5xl flex-col gap-16 px-2ch py-4ch sm:px-4ch">
+      <div class="flex justify-between gap-2ch text-xs text-fg-muted">
+        <span>BRAND(7)</span>
+        <span class="hidden sm:inline"
+          >@muradmadi/brand
+          <!-- mm:version --></span
+        >
+        <span>BRAND(7)</span>
+      </div>
+
+      <header class="flex flex-col gap-4ch">
+        <div class="flex flex-wrap items-end justify-between gap-2ch">
+          <h1 class="type-wordmark text-5xl sm:text-6xl">
+            murad madi<span class="wordmark-block animate-blink-twice"></span>
+          </h1>
+          <div class="flex border border-rule" role="group" aria-label="Theme">
+            <button
+              class="min-h-11 px-2ch text-xs text-fg hover:bg-surface"
+              data-set-theme="terminal"
+            >
+              terminal
+            </button>
+            <button
+              class="min-h-11 border-x border-rule px-2ch text-xs text-fg hover:bg-surface"
+              data-set-theme="paper"
+            >
+              paper
+            </button>
+            <button
+              class="min-h-11 px-2ch text-xs text-fg hover:bg-surface"
+              data-set-theme="system"
+            >
+              system
+            </button>
+          </div>
+        </div>
+        <p class="type-prose max-w-prose text-lg text-fg-2">
+          These are the files that carry my name: the logos, the banners for
+          each profile, the icons, the fonts and the email signature. Take what
+          you need. Everything here also ships in the npm package, along with
+          the theme my sites are built on.
+        </p>
+      </header>
+
+      <section id="install" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Install</h2>
+        <pre
+          class="max-w-code overflow-x-auto border border-rule bg-surface p-2ch text-sm leading-relaxed"
+        ><code><span class="text-fg-muted">$</span> bun add @muradmadi/brand
+
+@import "tailwindcss";
+@import "@muradmadi/brand/fonts.css";
+@import "@muradmadi/brand/theme.css";</code></pre>
+      </section>
+
+      <section id="colours" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Colours</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          Terminal is the default, paper is for a light preference and for
+          print, and coral is the only accent in either. Click a colour to copy
+          it.
+        </p>
+        <div class="grid gap-2ch md:grid-cols-2">
+          <!-- mm:themes -->
+        </div>
+        <div class="flex flex-wrap gap-1ch">
+          <!-- mm:palette -->
+        </div>
+      </section>
+
+      <section id="logos" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Logos</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          Each on the ground it's made for. Keep one block's width clear around
+          it, and don't set the mark smaller than 24 pixels. The PNGs are drawn
+          at four times the SVG's size, for documents and slides.
+        </p>
+        <div class="grid gap-2ch sm:grid-cols-2">
+          <!-- mm:logos -->
+        </div>
+      </section>
+
+      <section id="avatar" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Avatar</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          One square for every profile that doesn't get a photo. Platforms crop
+          it to a circle, so the mark sits in the middle.
+        </p>
+        <!-- mm:avatar -->
+      </section>
+
+      <section id="banners" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Banners</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          One per platform, at the size it asks for. The dashed boxes show what
+          each platform keeps on every screen and where the profile photo covers
+          it; they're not in the files.
+        </p>
+        <label class="flex min-h-11 items-center gap-1ch text-sm text-fg-muted">
+          <input
+            type="checkbox"
+            class="size-5 accent-coral"
+            checked
+            data-toggle-guides
+          />
+          show the crop guides
+        </label>
+        <div class="flex flex-col gap-4ch">
+          <!-- mm:banners -->
+        </div>
+      </section>
+
+      <section id="icons" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Icons</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          The favicon, the home-screen icons and the link preview. At 16 pixels
+          the block can't survive, so the smallest favicon is a coral tile with
+          a dark M. A site serves the package's
+          <code class="font-mono text-base">dist/icons/</code> at
+          <code class="font-mono text-base">/icons/</code> and pastes
+          <code class="font-mono text-base">head.html</code> into its head.
+        </p>
+        <!-- mm:icons -->
+      </section>
+
+      <section id="fonts" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Fonts</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          One face for the frame, one for the voice. Install these for
+          documents, slides and print; sites load them from the package's
+          <code class="font-mono text-base">fonts.css</code> instead. Both are
+          under the SIL Open Font License, which comes with each.
+        </p>
+        <div class="grid gap-2ch md:grid-cols-2">
+          <!-- mm:fonts -->
+        </div>
+      </section>
+
+      <section id="signature" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">
+          Email signature
+        </h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          Text only, so it looks the same in every mail app. To use it, copy it
+          here and paste it into the signature box: in Gmail that's Settings,
+          See all settings, General, Signature.
+        </p>
+        <div class="grid gap-2ch md:grid-cols-2">
+          <!-- mm:signatures -->
+        </div>
+      </section>
+
+      <section id="profile" class="flex flex-col gap-2ch">
+        <h2 class="type-label border-t border-rule pt-2ch text-sm">Profile</h2>
+        <p class="type-prose max-w-prose text-fg-2">
+          The facts the signature, the lockup and the banners are made from, in
+          one file, so a site never has to repeat them.
+        </p>
+        <!-- mm:profile -->
+      </section>
+
+      <footer
+        class="flex flex-wrap justify-between gap-2ch border-t border-rule pt-2ch text-xs text-fg-muted"
+      >
+        <span>muradmadi.com</span>
+        <span>code MIT · name and marks reserved · fonts OFL</span>
+        <span>BRAND(7)</span>
+      </footer>
+    </div>
+    <script>
+      for (const button of document.querySelectorAll("[data-set-theme]")) {
+        button.addEventListener("click", () => {
+          document.documentElement.dataset.theme = button.dataset.setTheme;
+        });
+      }
+      const guides = document.querySelector("[data-toggle-guides]");
+      guides.addEventListener("change", () => {
+        document.body.dataset.guides = guides.checked ? "on" : "off";
+      });
+      // Copy buttons: data-copy holds the text, data-copy-from names an element whose text to
+      // copy, and data-copy-rich names one to copy as formatted HTML, for signature boxes.
+      const done = (button) => {
+        const label = button.textContent;
+        button.textContent = "copied";
+        setTimeout(() => (button.textContent = label), 1200);
+      };
+      document.addEventListener("click", async (event) => {
+        const button = event.target.closest(
+          "[data-copy], [data-copy-from], [data-copy-rich]",
+        );
+        if (!button) return;
+        const { copy, copyFrom, copyRich } = button.dataset;
+        if (copyRich) {
+          const element = document.getElementById(copyRich);
+          await navigator.clipboard.write([
+            new ClipboardItem({
+              "text/html": new Blob([element.innerHTML], { type: "text/html" }),
+              "text/plain": new Blob([element.innerText], {
+                type: "text/plain",
+              }),
+            }),
+          ]);
+        } else {
+          const text = copy ?? document.getElementById(copyFrom).textContent;
+          await navigator.clipboard.writeText(text);
+        }
+        done(button);
+      });
+    </script>
+  </body>
+</html>
